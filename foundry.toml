@@ -1,0 +1,22 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+
+ffi = true
+ast = true
+build_info = true
+extra_output = ["storageLayout"]
+
+optimizer = true
+optimizer_runs = 100
+
+[rpc_endpoints]
+metis = "https://andromeda.metis.io/?owner=1088"  # Andromeda Mainnet# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+sepolia = "https://sepolia.metisdevops.link" # Sepolia Testnet
+
+[etherscan]
+metis = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
